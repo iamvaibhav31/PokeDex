@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  background-color: var(--overlay-background-color);
+  width: 100vw;
+}
+
+.overlay {
+  --overlay-background-color: rgba(59, 59, 59, 0.616);
+  --modal-background-color: #fff;
+  --modal-box-shadow: 0px 4px 10px rgba(0, 77, 255, 0.04);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: var(--modal-box-shadow);
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  outline: none;
+}
+
+.modal > div {
+  max-width: 100%;
+}

@@ -1,0 +1,30 @@
+.background {
+  background-color: #fff;
+  box-shadow: 0 4px 10px #004dff0a;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.typeTitle {
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+}
+
+.progressbartitle {
+  display: flex;
+  justify-content: space-between;
+}
+.progressBarCon {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.progressBar {
+  width: 100%;
+}

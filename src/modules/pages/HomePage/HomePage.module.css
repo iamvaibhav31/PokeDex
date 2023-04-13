@@ -1,0 +1,69 @@
+.container {
+  max-width: 100vw;
+  height: 100vh;
+  background-image: url("./../../../../public/IMG/PokemonPageBG.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
+/* max-width: 100vw;
+height: 100vh; */
+
+.body {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 6rem;
+  letter-spacing: 0.15rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.startButton {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.85rem;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.startButton:hover {
+  color: #000;
+  background-color: #fff;
+  border: none;
+}
+
+@media screen and (max-width: 1060px) {
+  .startButton {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .body {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .body {
+    width: 90%;
+  }
+}

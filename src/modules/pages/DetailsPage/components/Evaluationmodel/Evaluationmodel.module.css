@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 15px;
+  background-color: #fff;
+  width: 35rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px #004dff0a;
+
+  max-width: 96vw;
+  max-height: 90vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+}
+
+.closeButton {
+  color: red;
+  cursor: pointer;
+}
+
+.cardCon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4rem;
+  letter-spacing: 0.15rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.cardCon {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.bottonCon {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+}
+
+.prevArrow {
+  transform: rotateY(180deg);
+}
+.nextArrow,
+.prevArrow {
+  cursor: pointer;
+}
+
+.nextArrow svg path,
+.prevArrow svg path {
+  fill: #fff;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .cardCon {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .cardCon {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cardCon {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+  }
+}
