@@ -1,4 +1,4 @@
-# PokeDex Dem
+# PokeDex Demo
 
 First, run the development server:
 
