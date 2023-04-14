@@ -1,6 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PokeDex Demo
 
-## Getting Started
+
+https://user-images.githubusercontent.com/80534369/231856380-4a39be6a-fc5d-41eb-b42b-a47fc6ce4473.mp4
+
 
 First, run the development server:
 
