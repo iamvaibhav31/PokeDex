@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { GetPokemonsApi } from "@/services/pokemonsServices";
-import Card from "@/modules/components/Card/Card";
 import { useRouter } from "next/router";
 import usePagination from "@/Hooks/usePagination";
 import styles from "./PokemonPage.module.css";
 import Pagination from "@/lib/Pagination/Pagination";
 import CardList from "./components/CardList/CardList";
 import type { PokemonPageProps } from "./PokemonPage.type";
-// import dynamic from 'next/dynamic';
-
-// const MyComponent = dynamic(() => import('../components/MyComponent'), {
-//   loading: () => <p>Loading...</p>,
-//   ssr: false
-// });
 
 const PokemonPage = ({ data, loading, error }: PokemonPageProps) => {
   const router = useRouter();

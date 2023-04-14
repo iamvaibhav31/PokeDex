@@ -1,7 +1,3 @@
-import { useContext, useEffect, useState } from "react";
-import DataContext from "@/contextApi/DataContext";
-import { useRouter } from "next/router";
-
 const usePagination = () => {
   const getIndex = (pageno: number) => {
     if (pageno === 1) {
