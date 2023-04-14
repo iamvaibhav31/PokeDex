@@ -4,7 +4,7 @@ import Card from "@/modules/components/Card/Card";
 import { useRouter } from "next/router";
 import usePagination from "@/Hooks/usePagination";
 import styles from "./PokemonPage.module.css";
-import Pagination from "./components/Pagination/Pagination";
+import Pagination from "@/lib/Pagination/Pagination";
 import CardList from "./components/CardList/CardList";
 import type { PokemonPageProps } from "./PokemonPage.type";
 // import dynamic from 'next/dynamic';

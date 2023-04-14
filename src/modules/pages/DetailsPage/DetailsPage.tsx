@@ -12,6 +12,7 @@ import Evaluationmodel from "./components/Evaluationmodel/Evaluationmodel";
 import { GetEvolutionDetailsApi } from "@/services/EvolutionServices";
 import { useRouter } from "next/router";
 import { showToastMessage } from "@/lib/Toastify/ToastMessages";
+import { ApolloQueryResult } from "apollo-boost";
 const DetailsPage = ({
   attacks = {},
   details = {},
@@ -21,17 +22,16 @@ const DetailsPage = ({
   // console.log(attacks, details);
   const router = useRouter();
   const [showModel, setShowModel] = useState(false);
-  const [evollutionData, setEvolutionData] = useState([]);
-  const [evoError, setEvoError] = useState("");
-
+  const [evollutionData, setEvolutionData] = useState<any>([]);
   const handelEvolutionData = async () => {
     const { slug } = router.query;
     try {
-      const res = slug ? await GetEvolutionDetailsApi(slug[1], slug[0]) : [];
+      const res = slug ? await GetEvolutionDetailsApi(slug[1], slug[0]) : null;
       console.log(res);
+      if (!res) throw new Error("No response from api");
       setEvolutionData(res?.data?.pokemon?.evolutions);
-    } catch (err) {
-      setEvoError(err?.message);
+      setShowModel(true);
+    } catch (err: any) {
       showToastMessage("ERROR", err?.message);
     }
   };
@@ -53,12 +53,7 @@ const DetailsPage = ({
               <div className={styles.evolutioncon}>
                 <button
                   className={styles.evolutionButton}
-                  onClick={() => {
-                    handelEvolutionData();
-                    if (!evoError) {
-                      setShowModel((preState) => !preState);
-                    }
-                  }}
+                  onClick={handelEvolutionData}
                 >
                   Evolve
                 </button>

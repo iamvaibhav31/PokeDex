@@ -1,8 +1,8 @@
 import { ApolloError } from "apollo-boost";
 
 export interface DetailsPageProps {
-  details: {};
-  attacks: {};
+  details: any;
+  attacks: any;
   loading: boolean;
   error: string | ApolloError;
 }
